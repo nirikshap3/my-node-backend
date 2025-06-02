@@ -1,3 +1,3 @@
 module.exports = {
-  url: "mongodb://0.0.0.0:27017/npatel_db"
+  url: "mongodb://localhost:27017/npatel_db"
 };
