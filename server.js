@@ -4,7 +4,8 @@ const cors = require("cors");
 const app = express();
 
 var corsOptions = {
-  origin: "http://localhost:4200"
+  // origin: "http://localhost:4200"
+  origin: "https://dqslxlj475ols.cloudfront.net"
 };
 
 app.use(cors(corsOptions));
