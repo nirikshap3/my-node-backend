@@ -5,7 +5,10 @@ const app = express();
 
 var corsOptions = {
   // origin: "http://localhost:4200"
-  origin: "https://dqslxlj475ols.cloudfront.net"
+  // origin: "https://dqslxlj475ols.cloudfront.net",
+  origin: "https://nopoxo.xyz",
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  credentials: true,
 };
 
 app.use(cors(corsOptions));
