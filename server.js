@@ -6,9 +6,10 @@ const app = express();
 var corsOptions = {
   // origin: "http://localhost:4200"
   // origin: "https://dqslxlj475ols.cloudfront.net",
-  origin: "https://nopoxo.xyz",
-  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  credentials: true,
+  origin: "https://nopoxo.xyz",  // allow your frontend domain
+  methods: "GET,POST,PUT,DELETE,OPTIONS",
+  allowedHeaders: "Content-Type,Authorization",
+  // credentials: true
 };
 
 app.use(cors(corsOptions));
