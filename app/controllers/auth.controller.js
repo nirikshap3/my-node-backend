@@ -13,9 +13,13 @@ exports.register = async (req, res) => {
     const user = new User({ name, email, password: hashed });
     await user.save();
 
-    res.status(200).send({ message: 'User registered successfully!' });
+    res.status(200).send({ 
+        status: 200,
+        message: 'User registered successfully!' });
   } catch (err) {
-    res.status(500).send({ message: err.message });
+    res.status(500).send({ 
+        status: 500,
+        message: err.message });
   }
 };
 
@@ -35,8 +39,12 @@ exports.login = async (req, res) => {
       { expiresIn: tokenExpiry }
     );
 
-    res.status(200).send({ token, user: { name: user.name, email: user.email } });
+    res.status(200).send({ 
+        status: 200,
+        token, user: { name: user.name, email: user.email } });
   } catch (err) {
-    res.status(500).send({ message: err.message });
+    res.status(500).send({
+        status: 500,
+        message: err.message });
   }
 };
